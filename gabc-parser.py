@@ -6,11 +6,31 @@ input = open("an--exsultabunt_domino--solesmes_1934.gabc", "r")
 # it appears this code editor doesnt like diacritics, but those are somewhat important to me
 # start with the frequency of pitches
 
-header = re.search(".\%\%", input)
+header = re.search(".\%\%", gabc_file)
 #shear off % signs
-clef = re.search("\%\%\n\((c|f)(4|3|2))", input)
+clef = re.search("\%\%\n\((c|f)(4|3|2))", gabc_file)
 #shear off % signs
-body = re.search("\%\%\n\((c|f)(4|3|2)).", input)
+body = re.search("\%\%\n\((c|f)(4|3|2)).", gabc_file)
 #shear off % signs and clef
 
-syllablePitches = 
+syllablePitches =
+
+def split_gabc(str gabc_file):
+    header = re.search(".\%\%", gabc_file)
+    
+    clef = re.search("\%\%\n\((c|f)(4|3|2))", gabc_file)
+    
+    body = re.search("\%\%\n\((c|f)(4|3|2)).", gabc_file)
+    
+    return split_gabc_file[header, clef, body]
+
+#test function
+print(split_gabc(input))
+
+def extract_metadata(str header):
+    return metadata[usage, title, mode, occasion]
+
+def extract_note_positions
+
+def convert_positions_to_pitches
+
